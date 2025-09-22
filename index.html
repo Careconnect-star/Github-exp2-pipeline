@@ -14,13 +14,14 @@
       font-family: Arial, sans-serif;
       font-size: 14px;
 
-      /* Animated Gradient Background */
-      background: linear-gradient(270deg, #007f3f, #00b894, #0984e3, #6c5ce7);
-      background-size: 800% 800%;
-      animation: gradientAnimation 15s ease infinite;
+      /* RGB rainbow diagonal background */
+      background: linear-gradient(135deg, 
+        red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400% 400%;
+      animation: rgbWave 12s linear infinite;
     }
 
-    @keyframes gradientAnimation {
+    @keyframes rgbWave {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -30,17 +31,21 @@
       font-size: 500%;
       font-weight: normal;
       margin-bottom: 0;
+      text-shadow: 0 0 15px rgba(255,255,255,0.6);
     }
 
     h2 {
       font-size: 200%;
       font-weight: normal;
       margin-bottom: 0;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
     }
 
     .container {
       text-align: center;
       padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -48,8 +53,8 @@
   <div class="container">
     <h1>Congratulations!</h1>
     <h2>
-      You have successfully created a pipeline that retrieved this source application from an Amazon S3 bucket and deployed it 
-      to three Amazon EC2 instances using AWS CodeDeploy.
+      You have successfully created a pipeline that retrieved this source application 
+      from an Amazon S3 bucket and deployed it to three Amazon EC2 instances using AWS CodeDeploy.
     </h2>
     <p>For next steps, read the AWS CodePipeline Documentation. Incedge 2020</p>
   </div>
